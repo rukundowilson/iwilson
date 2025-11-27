@@ -269,140 +269,123 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
 }
 
-/* About Section */
-.about-section {
+/* Blog Section */
+.blog-section {
     background-color: #f9fafb;
     padding: 5rem 0;
 }
 
-.about-grid {
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blog-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 1.5rem;
 }
 
-.about-text h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.about-text p {
-    color: #374151;
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
-}
-
-.skills-card {
+.blog-card {
     background-color: #ffffff;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skills-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 1.5rem;
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.accordion-btn {
+.blog-image {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    border: none;
-    border-bottom: 1px solid #e5e7eb;
-    background: none;
-    cursor: pointer;
-    text-align: left;
+    height: 200px;
+    overflow: hidden;
 }
 
-.accordion-btn h4 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #111827;
-}
-
-.accordion-btn i {
-    color: #4b5563;
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    padding-top: 0;
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
 }
 
-.accordion-content.active {
-    max-height: 500px;
-    padding-top: 1rem;
+.blog-content {
+    padding: 1.5rem;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.skill-item {
-    text-align: center;
-}
-
-.skill-icon {
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.skill-icon.yellow {
-    background-color: #fef3c7;
-}
-
-.skill-icon.orange {
-    background-color: #fed7aa;
-}
-
-.skill-icon.blue {
-    background-color: #dbeafe;
-}
-
-.skill-icon.green {
-    background-color: #d1fae5;
-}
-
-.skill-icon i {
-    font-size: 2rem;
-}
-
-.skill-icon.yellow i {
-    color: #d97706;
-}
-
-.skill-icon.orange i {
-    color: #ea580c;
-}
-
-.skill-icon.blue i {
-    color: #2563eb;
-}
-
-.skill-icon.green i {
-    color: #059669;
-}
-
-.skill-item p {
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
     font-size: 0.875rem;
+}
+
+.blog-date {
+    color: #6b7280;
+}
+
+.blog-date i {
+    margin-right: 0.25rem;
+}
+
+.blog-category {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
     font-weight: 500;
+}
+
+.blog-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.blog-excerpt {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.blog-link {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+}
+
+.blog-link:hover {
+    gap: 0.75rem;
+}
+
+.blog-link i {
+    font-size: 0.875rem;
 }
 
 /* Contact Section */
@@ -539,8 +522,8 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .about-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .footer-content {
