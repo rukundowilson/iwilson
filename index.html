@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -70,9 +71,113 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Left Column: About Text -->
+                <div class="about-card">
+                    <h2>About Myself</h2>
+                    <p>
+                        I help run a software development company that build a product, feature or website look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.
+                    </p>
+                    <a href="#contact" class="cta-link">LET'S CONNECT</a>
+                    <div class="social-icons" style="margin-top: 1rem;">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1.5rem;">Get my resume</button>
+                </div>
+
+                <!-- Right Column: Skills -->
+                <div class="skills-card">
+                    <!-- Languages Section -->
+                    <div class="skill-section">
+                        <button class="accordion-btn">
+                            <h4>Languages</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content active">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-icon yellow">
+                                        <i class="fab fa-js"></i>
+                                    </div>
+                                    <p>Javascript</p>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon orange">
+                                        <i class="fab fa-html5"></i>
+                                    </div>
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon blue">
+                                        <i class="fab fa-css3-alt"></i>
+                                    </div>
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks Section -->
+                    <div class="skill-section">
+                        <button class="accordion-btn">
+                            <h4>Frameworks</h4>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-icon blue">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                    <p>React</p>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon green">
+                                        <i class="fab fa-vuejs"></i>
+                                    </div>
+                                    <p>Vue.js</p>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon green">
+                                        <i class="fab fa-node"></i>
+                                    </div>
+                                    <p>Node.js</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="skill-section">
+                        <button class="accordion-btn">
+                            <h4>Skills</h4>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="skill-tags">
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">GitHub</span>
+                                <span class="skill-tag">REST APIs</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
+            <h2 class="section-title">My Recent Work</h2>
+            <p class="section-subtitle">Here are a few projects I've worked on recently</p>
             
             <!-- Project 1: smartflow -->
             <div class="project-card">
@@ -82,16 +187,16 @@
                     </div>
                     <div class="project-info">
                         <h2>smartflow</h2>
-                        <p class="project-meta"><strong>onologies</strong> • Full Stack Dev • 2024</p>
+                        <p class="project-meta"><strong>oracleps</strong> • full stack dev • 2024</p>
                         <p class="project-description">
-                            I collaborated with my team on the v2 of a giant retailer and IT team tools, manage and analyze kiosks efficiently.
+                            An IT helpdesk app where staff raise support tickets and IT teams track, manage, and resolve issues efficiently.
                         </p>
                         <div class="skill-tags">
-                            <span class="skill-badge">html</span>
-                            <span class="skill-badge">css</span>
-                            <span class="skill-badge">javascript</span>
+                            <span class="skill-badge">typescript</span>
+                            <span class="skill-badge">node.js</span>
+                            <span class="skill-badge">MYSQL</span>
                         </div>
-                        <button class="btn-primary">See project</button>
+                        <button class="btn-primary" onclick="openModal('smartflow', 'oracleps • full stack dev • 2024', 'images/smartflow-img.png', 'An IT helpdesk app where staff raise support tickets and IT teams track, manage, and resolve issues efficiently.', ['typescript', 'node.js', 'MYSQL'], '#', '#')">See project</button>
                     </div>
                 </div>
             </div>
@@ -103,15 +208,15 @@
                         <h2>TUVUGANE</h2>
                         <p class="project-meta"><strong>Hackathon</strong> • Full Stack Dev • 2025</p>
                         <p class="project-description">
-                            A Shiga encyclopedia platform that empowers people to submit complaints, track progress, and collaborate with local authorities to build better communities.
+                            A citizen engagement platform that empowers people to submit complaints, track progress, and collaborate with local authorities to build better communities.
                         </p>
                         <div class="skill-tags">
-                            <span class="skill-badge">VUEJS</span>
+                            <span class="skill-badge">Node.js</span>
                             <span class="skill-badge">Javascript</span>
                             <span class="skill-badge">mysql</span>
                             <span class="skill-badge">typescript</span>
                         </div>
-                        <button class="btn-primary">See project</button>
+                        <button class="btn-primary" onclick="openModal('TUVUGANE', 'Hackathon • Full Stack Dev • 2025', 'images/tuvugane-img.png', 'A citizen engagement platform that empowers people to submit complaints, track progress, and collaborate with local authorities to build better communities.', ['Node.js', 'Javascript', 'mysql', 'typescript'], '#', '#')">See project</button>
                     </div>
                     <div class="project-image">
                         <img src="images/tuvugane-img.png" alt="TUVUGANE project" style="width: 100%; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
@@ -126,17 +231,18 @@
                         <img src="images/jirani-img.png" alt="Jirisi e-commerce project" style="width: 100%; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                     </div>
                     <div class="project-info">
-                        <h2>Jirisi (e-commerce store)</h2>
-                        <p class="project-meta"><strong>Freelance</strong> • Full Stack Dev • 2025</p>
+                        <h2>Jirani(online store)</h2>
+                        <p class="project-meta"><strong>jirani store</strong> • Full Stack Dev • 2025</p>
                         <p class="project-description">
-                            Jirisi is a smart fashion tool that users create outfits, mix styles, and visualize looks before wearing or buying.
+                            Jirani is a smart fashion tool that lets users create outfits, mix styles, and visualize looks before wearing or buying.
                         </p>
                         <div class="skill-tags">
+                            <span class="skill-badge">typescript</span>
+                            <span class="skill-badge">Node.js</span>
+                            <span class="skill-badge">mysql</span>
                             <span class="skill-badge">javascript</span>
-                            <span class="skill-badge">mongo</span>
-                            <span class="skill-badge">reactjs</span>
                         </div>
-                        <button class="btn-primary">See project</button>
+                        <button class="btn-primary" onclick="openModal('Jirani(online store)', 'jirani store • Full Stack Dev • 2025', 'images/jirani-img.png', 'Jirani is a smart fashion tool that lets users create outfits, mix styles, and visualize looks before wearing or buying.', ['typescript', 'Node.js', 'mysql', 'javascript'], '#', '#')">See project</button>
                     </div>
                 </div>
             </div>
@@ -155,7 +261,7 @@
                             <span class="skill-badge">css</span>
                             <span class="skill-badge">javascript</span>
                         </div>
-                        <button class="btn-primary">See project</button>
+                        <button class="btn-primary" onclick="openModal('aviaTrust', 'avia Trust • frontend dev • 2024', 'images/avia trust.png', 'Avialtrust is an insurance booking page for booking and real-time breakdown assistance for taxi, café, and buses-bus travel.', ['html', 'css', 'javascript'], '#', '#')">See project</button>
                     </div>
                     <div class="project-image">
                         <img src="images/avia trust.png" alt="aviaTrust car rental" style="width: 100%; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
@@ -176,7 +282,7 @@
                 <!-- Blog Card 1 -->
                 <article class="blog-card">
                     <div class="blog-image">
-                        <img src="images/blog1-img.jpeg" alt="My coding journey">
+                        <img src="images/blog1-img.jpeg" alt="My coding journey" class="blog-img-top">
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
@@ -185,7 +291,7 @@
                         </div>
                         <h3 class="blog-title">From a Pencil to Programming</h3>
                         <p class="blog-excerpt">
-                            At just 6 years old, my journey into programming began. Two weeks after my mom brought home an HP Elitebook 8460p, I was already writing HTML. Innovation has been my passion ever since.
+                            At 6 years old, I taught myself HTML on an HP Elitebook 8460p. Two weeks later, I was writing my first program...
                         </p>
                         <a href="blog-post-1.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -194,16 +300,16 @@
                 <!-- Blog Card 2 -->
                 <article class="blog-card">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" alt="Blog post">
+                        <img src="images/attendes-teck-events.jpeg" alt="Tech events and exhibitions">
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-date"><i class="far fa-calendar"></i> Nov 15, 2024</span>
-                            <span class="blog-category">JavaScript</span>
+                            <span class="blog-category">Community</span>
                         </div>
-                        <h3 class="blog-title">JavaScript Best Practices for Clean Code</h3>
+                        <h3 class="blog-title">Tech Events Changed My Career Path</h3>
                         <p class="blog-excerpt">
-                            Discover essential JavaScript patterns and practices that will make your code more maintainable and efficient.
+                            Networking with innovators, learning trends, and pitching ideas at tech events opened doors I never imagined...
                         </p>
                         <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -219,9 +325,9 @@
                             <span class="blog-date"><i class="far fa-calendar"></i> Nov 10, 2024</span>
                             <span class="blog-category">Career</span>
                         </div>
-                        <h3 class="blog-title">My Journey into Software Development</h3>
+                        <h3 class="blog-title">Building Production Apps: Lessons Learned</h3>
                         <p class="blog-excerpt">
-                            From learning HTML at age 4 to building production applications - here's my story and lessons learned along the way.
+                            From my first HTML page to production applications - the mistakes, breakthroughs, and lessons that shaped my journey...
                         </p>
                         <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -270,6 +376,39 @@
             </div>
         </div>
     </footer>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-meta" id="modalMeta"></p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="Project">
+                </div>
+                
+                <p class="modal-description" id="modalDescription"></p>
+                
+                <div class="modal-tags" id="modalTags"></div>
+                
+                <div class="modal-actions">
+                    <a href="#" class="modal-btn modal-btn-primary" id="modalLiveLink" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> See Live
+                    </a>
+                    <a href="#" class="modal-btn modal-btn-secondary" id="modalSourceLink" target="_blank">
+                        <i class="fab fa-github"></i> See Source
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

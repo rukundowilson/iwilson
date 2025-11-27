@@ -141,3 +141,59 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// Modal Functions
+function openModal(title, meta, image, description, tags, liveLink, sourceLink) {
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalMeta = document.getElementById('modalMeta');
+    const modalImage = document.getElementById('modalImage');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalTags = document.getElementById('modalTags');
+    const modalLiveLink = document.getElementById('modalLiveLink');
+    const modalSourceLink = document.getElementById('modalSourceLink');
+    
+    // Set content
+    modalTitle.textContent = title;
+    modalMeta.textContent = meta;
+    modalImage.src = image;
+    modalImage.alt = title;
+    modalDescription.textContent = description;
+    
+    // Set tags
+    modalTags.innerHTML = '';
+    tags.forEach(tag => {
+        const tagElement = document.createElement('span');
+        tagElement.className = 'modal-tag';
+        tagElement.textContent = tag;
+        modalTags.appendChild(tagElement);
+    });
+    
+    // Set links
+    modalLiveLink.href = liveLink;
+    modalSourceLink.href = sourceLink;
+    
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('projectModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+document.getElementById('projectModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
