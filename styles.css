@@ -491,8 +491,39 @@ nav a:hover {
     object-position: center 20%;
 }
 
+.blog-image img.blog-img-certificate {
+    object-fit: contain;
+    background-color: #f9fafb;
+    padding: 1rem;
+}
+
 .blog-card:hover .blog-image img {
     transform: scale(1.05);
+}
+
+.blog-image-placeholder {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.code-icon-placeholder {
+    font-size: 5rem;
+    color: #ffffff;
+}
+
+.code-icon-placeholder i {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
 }
 
 .blog-content {
