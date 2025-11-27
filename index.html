@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wilson - Software Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div>
+                <a href="#" class="nav-brand">Wilson</a>
+            </div>
+            <div class="nav-links">
+                <a href="#portfolio">Portfolio</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div style="padding: 0.5rem;">
+                <a href="#portfolio">Portfolio</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <!-- Profile Image -->
+            <div class="hero-image">
+                <img src="images/portfolio_img.jpeg" alt="Wilson">
+                <!-- Social Icons Below Image -->
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <!-- Hero Text -->
+            <div class="hero-text">
+                <h1>I'm Wilson.<br>Glad to see you!</h1>
+                <p>
+                    I'm a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-link">LET'S CONNECT</a>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            
+            <!-- Project 1: smartflow -->
+            <div class="project-card">
+                <div class="project-grid">
+                    <div class="project-image">
+                        <img src="images/smartflow-img.png" alt="smartflow project" style="width: 100%; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="project-info">
+                        <h2>smartflow</h2>
+                        <p class="project-meta"><strong>onologies</strong> • Full Stack Dev • 2024</p>
+                        <p class="project-description">
+                            I collaborated with my team on the v2 of a giant retailer and IT team tools, manage and analyze kiosks efficiently.
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-badge">html</span>
+                            <span class="skill-badge">css</span>
+                            <span class="skill-badge">javascript</span>
+                        </div>
+                        <button class="btn-primary">See project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: TUVUGANE -->
+            <div class="project-card">
+                <div class="project-grid">
+                    <div class="project-info">
+                        <h2>TUVUGANE</h2>
+                        <p class="project-meta"><strong>Hackathon</strong> • Full Stack Dev • 2025</p>
+                        <p class="project-description">
+                            A Shiga encyclopedia platform that empowers people to submit complaints, track progress, and collaborate with local authorities to build better communities.
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-badge">VUEJS</span>
+                            <span class="skill-badge">Javascript</span>
+                            <span class="skill-badge">mysql</span>
+                            <span class="skill-badge">typescript</span>
+                        </div>
+                        <button class="btn-primary">See project</button>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/tuvugane-img.png" alt="TUVUGANE project" style="width: 100%; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Jirisi -->
+            <div class="project-card">
+                <div class="project-grid">
+                    <div class="project-image">
+                        <img src="images/jirani-img.png" alt="Jirisi e-commerce project" style="width: 100%; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="project-info">
+                        <h2>Jirisi (e-commerce store)</h2>
+                        <p class="project-meta"><strong>Freelance</strong> • Full Stack Dev • 2025</p>
+                        <p class="project-description">
+                            Jirisi is a smart fashion tool that users create outfits, mix styles, and visualize looks before wearing or buying.
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-badge">javascript</span>
+                            <span class="skill-badge">mongo</span>
+                            <span class="skill-badge">reactjs</span>
+                        </div>
+                        <button class="btn-primary">See project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: aviaTrust -->
+            <div class="project-card">
+                <div class="project-grid">
+                    <div class="project-info">
+                        <h2>aviaTrust</h2>
+                        <p class="project-meta"><strong>avia Trust</strong> • frontend dev • 2024</p>
+                        <p class="project-description">
+                            Avialtrust is an insurance booking page for booking and real-time breakdown assistance for taxi, café, and buses-bus travel.
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-badge">html</span>
+                            <span class="skill-badge">css</span>
+                            <span class="skill-badge">javascript</span>
+                        </div>
+                        <button class="btn-primary">See project</button>
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&h=400&fit=crop" alt="aviaTrust car rental" style="width: 100%; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-grid">
+            <!-- Left Column: About Text -->
+            <div class="about-text">
+                <h2>
+                    Hi, I'm Wilson Rukundo!<br>
+                    Crafting technical solutions<br>in the heart of Kigali City.
+                </h2>
+                <p>
+                    From the moment I could hold a pencil, I've been creating. At just 4 years old, my journey into programming began. Only two weeks after my mom bought home a brand-new HP Pavilion laptop, I had already taught myself enough HTML and CSS to build my very first website—a simple digital magazine for my soccer team. That website may have been my passion ever since.
+                </p>
+                <p>
+                    Since then, I've always been my first boss, even more than computers. Coding isn't a chore; it's a creative playground. Some make art with paints and brushes, while I create with closing tags, semicolons, and brackets. I truly believe that coding is as much an art form as it is technology. This artistic perspective has fueled my passion for coding, making every line of code a brushstroke in my digital masterpiece.
+                </p>
+                <p>
+                    Staying positive and tackling mind games like puzzle solving, word games, logic challenges, crosswords, and Sudoku has always been my comfort zone. I vividly remember feeling a spine chill, euphoria once I finally solve that riddle me and my friends have been trying to solve for months and getting that thrill. When it feels like I have a headache (game) but I have to not then, problem-solving sure, my passion, and I love diverse me ever since.
+                </p>
+                <p>
+                    I'm ready to embark on a career in software engineering. If you want make a dedicated and skilled developer to drive meaningful change, feel no hesitation—I'm your ideal candidate.
+                </p>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="#contact" class="btn-primary">LET'S CONNECT</a>
+                    <button class="btn-primary">Get my resume</button>
+                </div>
+            </div>
+
+            <!-- Right Column: Skills -->
+            <div>
+                <div class="skills-card">
+                    <h3>About Myself</h3>
+                    <p>
+                        I help run a software development company that build a product, feature or website look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.
+                    </p>
+                    <a href="#contact" class="cta-link" style="display: inline-block; margin-bottom: 1.5rem;">LET'S CONNECT</a>
+                    
+                    <!-- Languages Section -->
+                    <div style="margin-bottom: 1rem;">
+                        <button class="accordion-btn">
+                            <h4>Languages</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content active">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-icon yellow">
+                                        <i class="fab fa-js"></i>
+                                    </div>
+                                    <p>Javascript</p>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon orange">
+                                        <i class="fab fa-html5"></i>
+                                    </div>
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon blue">
+                                        <i class="fab fa-css3-alt"></i>
+                                    </div>
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks Section -->
+                    <div style="margin-bottom: 1rem;">
+                        <button class="accordion-btn">
+                            <h4>Frameworks</h4>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-icon blue">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                    <p>React</p>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon green">
+                                        <i class="fab fa-vuejs"></i>
+                                    </div>
+                                    <p>Vue.js</p>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon green">
+                                        <i class="fab fa-node"></i>
+                                    </div>
+                                    <p>Node.js</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div>
+                        <button class="accordion-btn">
+                            <h4>Skills</h4>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                <span style="background: #f3f4f6; color: #374151; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.875rem;">Git</span>
+                                <span style="background: #f3f4f6; color: #374151; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.875rem;">GitHub</span>
+                                <span style="background: #f3f4f6; color: #374151; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.875rem;">REST APIs</span>
+                                <span style="background: #f3f4f6; color: #374151; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.875rem;">MongoDB</span>
+                                <span style="background: #f3f4f6; color: #374151; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.875rem;">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" style="width: 100%; margin-top: 1.5rem;">Get my resume</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>Contact me</h2>
+            <p>
+                If you have an application you are interested in<br>
+                developing, a feature that you need built or a project<br>
+                that needs coding. I'd love to help with it!
+            </p>
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Full name" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required class="form-input"></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="form-submit">Get in touch</button>
+                </div>
+            </form>
+
+            <div id="form-message" class="form-message hidden"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Wilson. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
