@@ -93,6 +93,53 @@ nav a:hover {
 .hero-section {
     background-color: #ffffff;
     padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-shape {
+    position: absolute;
+    opacity: 0.8;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.shape-1 {
+    top: 10%;
+    left: 5%;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    border-radius: 0 0 60px 0;
+    transform: rotate(45deg);
+}
+
+.shape-2 {
+    bottom: 15%;
+    right: 8%;
+    width: 80px;
+    height: 80px;
+    border: 8px solid #60a5fa;
+    border-radius: 50%;
+}
+
+.shape-3 {
+    top: 15%;
+    right: 15%;
+    width: 40px;
+    height: 40px;
+    background-color: #93c5fd;
+    border-radius: 50%;
+}
+
+.shape-4 {
+    bottom: 10%;
+    left: 10%;
+    width: 100px;
+    height: 20px;
+    background-color: #dbeafe;
+    transform: rotate(-30deg);
+    border-radius: 10px;
 }
 
 .hero-content {
@@ -103,6 +150,8 @@ nav a:hover {
     grid-template-columns: 1fr;
     gap: 3rem;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-image img {
@@ -824,74 +873,5 @@ footer {
 
 footer p {
     color: #4b5563;
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-    .hero-content {
-        grid-template-columns: 1fr 2fr;
-    }
-
-    .hero-text {
-        text-align: left;
-    }
-
-    .hero-text p {
-        margin-left: 0;
-    }
-
-    .hero-cta {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .blog-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-    }
-
-    .blog-two-column {
-        grid-template-columns: 400px 1fr;
-        gap: 4rem;
-    }
-
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .mobile-menu-btn {
-        display: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .project-info h2 {
-        font-size: 1.75rem;
-    }
-
-    .about-text h2 {
-        font-size: 2rem;
-    }
 }
 

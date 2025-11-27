@@ -1,0 +1,131 @@
+/* Responsive Design */
+@media (min-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    .hero-text p {
+        margin-left: 0;
+    }
+
+    .hero-cta {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .blog-two-column {
+        grid-template-columns: 400px 1fr;
+        gap: 4rem;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+    }
+    
+    .modal-body {
+        grid-template-columns: 400px 1fr;
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .project-info h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    /* Adjust shapes for mobile */
+    .shape-1 {
+        width: 40px;
+        height: 40px;
+        top: 5%;
+        left: 2%;
+    }
+
+    .shape-2 {
+        width: 50px;
+        height: 50px;
+        border-width: 5px;
+        bottom: 5%;
+        right: 5%;
+    }
+
+    .shape-3 {
+        width: 25px;
+        height: 25px;
+        top: 8%;
+        right: 5%;
+    }
+
+    .shape-4 {
+        width: 60px;
+        height: 15px;
+        bottom: 5%;
+        left: 5%;
+    }
+    
+    .modal-container {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .modal-header {
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+
+    .modal-body {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .modal-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
