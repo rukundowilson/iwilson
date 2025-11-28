@@ -52,12 +52,6 @@
             <!-- Profile Image -->
             <div class="hero-image">
                 <img src="images/portfolio_img.jpeg" alt="Wilson">
-                <!-- Social Icons Below Image -->
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                </div>
             </div>
 
             <!-- Hero Text -->
@@ -346,27 +340,55 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="contact-container">
-            <h2>Contact me</h2>
+            <h2>Get in touch</h2>
             <p>
                 If you have an application you are interested in<br>
                 developing, a feature that you need built or a project<br>
                 that needs coding. I'd love to help with it!
             </p>
 
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Full name" required class="form-input">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info-card">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:rukundowilson5@gmail.com">rukundowilson5@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Phone & WhatsApp</h3>
+                            <a href="https://wa.me/250790080450" target="_blank">+250 790 080 450</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Kigali, Rwanda</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required class="form-input">
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required class="form-input"></textarea>
-                </div>
-                <div style="text-align: center;">
-                    <button type="submit" class="form-submit">Get in touch</button>
-                </div>
-            </form>
+
+                <!-- Contact Form -->
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Full name" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required class="form-input"></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="form-submit">Get in touch</button>
+                    </div>
+                </form>
+            </div>
 
             <div id="form-message" class="form-message hidden"></div>
         </div>

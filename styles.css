@@ -212,8 +212,13 @@ nav a.active {
 .hero-cta {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
+}
+
+.hero-cta .social-icons {
+    display: flex;
+    gap: 1rem;
 }
 
 .cta-link {
@@ -776,13 +781,13 @@ nav a.active {
 }
 
 .contact-container {
-    max-width: 48rem;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
 .contact-section h2 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #ffffff;
     text-align: center;
@@ -790,15 +795,70 @@ nav a.active {
 }
 
 .contact-section p {
-    color: #bfdbfe;
-    font-size: 1.125rem;
+    color: #ffffff;
+    font-size: 1.25rem;
     text-align: center;
     margin-bottom: 3rem;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.contact-info-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #bfdbfe;
+    margin-top: 0.25rem;
+}
+
+.contact-item h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.contact-item a, 
+.contact-item p {
+    color: #dbeafe;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #ffffff;
 }
 
 .contact-form {
-    max-width: 28rem;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
 }
 
 .form-group {

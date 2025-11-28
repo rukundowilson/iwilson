@@ -13,8 +13,8 @@
     }
 
     .hero-cta {
-        flex-direction: row;
-        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .project-grid {
@@ -33,6 +33,12 @@
     .blog-two-column {
         grid-template-columns: 400px 1fr;
         gap: 4rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
     }
 
     .footer-content {
