@@ -106,6 +106,10 @@
         bottom: 5%;
         left: 5%;
     }
+
+    .shape-5, .shape-6, .shape-7, .shape-8, .shape-9, .shape-10 {
+        display: none; /* Hide extra decorations on mobile to keep it clean */
+    }
     
     .modal-container {
         width: 95%;
