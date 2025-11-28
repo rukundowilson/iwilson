@@ -48,6 +48,11 @@ nav a:hover {
     color: #2563eb;
 }
 
+nav a.active {
+    color: #2563eb;
+    font-weight: 600;
+}
+
 .nav-brand {
     font-size: 1.25rem;
     font-weight: 700;
