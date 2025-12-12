@@ -36,8 +36,8 @@ accordionBtns.forEach(btn => {
     });
 });
 
-// Smooth Scrolling for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth Scrolling for Navigation Links (exclude modal links)
+document.querySelectorAll('a[href^="#"]:not(#modalLiveLink):not(#modalSourceLink)').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
@@ -193,8 +193,23 @@ function openModal(title, meta, image, description, tags, liveLink, sourceLink) 
     });
     
     // Set links
-    modalLiveLink.href = liveLink;
-    modalSourceLink.href = sourceLink;
+    if (liveLink && liveLink !== '#') {
+        modalLiveLink.href = liveLink;
+        modalLiveLink.style.pointerEvents = 'auto';
+    } else {
+        modalLiveLink.href = '#';
+        modalLiveLink.style.pointerEvents = 'none';
+        modalLiveLink.style.opacity = '0.5';
+    }
+    
+    if (sourceLink && sourceLink !== '#') {
+        modalSourceLink.href = sourceLink;
+        modalSourceLink.style.pointerEvents = 'auto';
+    } else {
+        modalSourceLink.href = '#';
+        modalSourceLink.style.pointerEvents = 'none';
+        modalSourceLink.style.opacity = '0.5';
+    }
     
     // Show modal
     modal.classList.add('active');
@@ -207,8 +222,9 @@ function closeModal() {
     document.body.style.overflow = 'auto';
 }
 
-// Close modal when clicking outside
+// Close modal when clicking outside (but not on modal content)
 document.getElementById('projectModal').addEventListener('click', function(e) {
+    // Only close if clicking directly on the overlay, not on modal content
     if (e.target === this) {
         closeModal();
     }
