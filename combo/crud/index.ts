@@ -1,6 +1,7 @@
 import express from "express";
 import swaggerUi from "swagger-ui-express";
 import cors from "cors";
+import dotenv from "dotenv";
 import categoriesRouter from "./src/routes/categories";
 import productsRouter from "./src/routes/products";
 import cartRouter from "./src/routes/cart";
@@ -8,11 +9,19 @@ import authRouter from "./src/routes/auth";
 import { connectMongo } from "./src/data/mongoConfig";
 import { swaggerSpec } from "./src/config/swagger";
 
+dotenv.config();
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// middleware
-app.use(cors());
+// Configure CORS - allow all origins (use with caution in production)
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 // Swagger documentation
