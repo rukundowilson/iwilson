@@ -46,7 +46,7 @@ async function startServer() {
       console.log(`API Documentation: http://localhost:${PORT}/api-docs`);
     });
   } catch (error) {
-    console.error("Failed to connect to MongoDB:", error);
+    console.error("Failed to vvvv connect to MongoDB:", error);
     process.exit(1);
   }
 }
