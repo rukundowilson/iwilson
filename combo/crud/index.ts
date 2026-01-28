@@ -18,6 +18,11 @@ app.use(express.json());
 // Swagger documentation
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+// wellcome
+app.get("/", (req, res) => {
+  res.send("Welcome to the CRUD API");
+});
+
 // routes
 app.use("/api/auth", authRouter);
 app.use("/api/categories", categoriesRouter);
